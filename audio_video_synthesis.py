@@ -33,8 +33,10 @@ if __name__ == "__main__":
 
 	if args.v != None:
 		args.v = Path(args.v)
+		assert args.v.exists(),f"文件 {args.v} 不存在！"
 	if args.a != None:
 		args.a = Path(args.a)
+		assert args.a.exists(),f"文件 {args.a} 不存在！"
 
 	if args.v != None and args.a != None:
 		if args.o is None and args.auto is None:
